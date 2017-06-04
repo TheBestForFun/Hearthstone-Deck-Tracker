@@ -212,6 +212,10 @@ namespace Hearthstone_Deck_Tracker.Plugins
 					}
 				}
 			}
+			catch(ReflectionTypeLoadException ex)
+			{
+				Log.Error("Error loading " + pFileName + ":\n" + ex);
+			}
 			catch(Exception ex)
 			{
 				Log.Error("Error loading " + pFileName + ":\n" + ex);
